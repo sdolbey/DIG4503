@@ -17,22 +17,28 @@ console.log(people);
 
 //You can use js filter or map instead of for each loops
 App.get("/person/name/:name", (req, res) => {
+
+    let result = {"error": "Could not find"};
+    
     people.forEach((value)=> {
         if(value.name == req.params.name) {
-            res.send(value);
+            result = value;
         }
     });
-    res.send("very sad and brave");
+    res.send(result);
 });
 
 
 App.get("/person/color/:color", (req, res) => {
+
+    let result = {"error": "Could not find"};
+
     people.forEach((value)=> {
         if(value.color == req.params.color) {
-            res.send(value);
+            result = value;
         }
     });
-    res.send("very sad and brave");
+    res.send(result);
 });
 
 App.listen(port, ()=> {
