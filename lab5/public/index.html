@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+    </head>
+    <body>
+        <script>
+            function checkID(event) {
+                event.preventDefault();
+
+                let element = document.querySelector("#id");
+
+                fetch("/id/" + element.value).then((res) => {
+                    return res.json();
+                }).then((processed) => {
+                    let reporting = document.querySelector("#reportingArea");
+
+                    if(processed.error) {
+                        reporting.innerHTML = processed.error;
+                    } else {
+                        reporting.innerHTML = processed.name;
+                    }
+                })
+            }
+            function checkName(event) {
+                event.preventDefault();
+
+                let element = document.querySelector("#name");
+
+                fetch("/name/" + element.value).then((res) => {
+                    return res.json();
+                }).then((processed) => {
+                    let reporting = document.querySelector("#reportingArea");
+
+                    if(processed.error) {
+                        reporting.innerHTML = processed.error;
+                    } else {
+                        reporting.innerHTML = processed.name;
+                    }
+                })
+            }
+        </script>
+        <div class="container">
+            <div class="row" style="margin-top: 25%">
+                <div class="one-half column">
+                    <h2>Search by ID</h2>
+                    <form onsubmit="checkID(event)">
+                        <input id="id" type="text">
+                        <button>Search</button>
+                    </form>
+                </div>
+                <div class="one-half column">
+                    <h2>Search by Name</h2>
+                    <form onsubmit="checkName(event)">
+                        <input id="name" type="text">
+                        <button>Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <h2>Reporting</h2>
+                <div id="reportingArea"></div>
+            </div>
+        </div>
+    </body>
+</html>
