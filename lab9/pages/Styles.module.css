@@ -1,0 +1,23 @@
+.container{
+    margin: auto;
+    max-width: 960px;
+    border: 2px dashed saddlebrown;
+    padding: 16px;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+}
+.nav > * {
+    padding-right: 16px;
+    font-size: 16pt;
+    color: maroon;
+}
+.welcome {
+    font-size: 24pt;
+    color: seagreen;
+}
+.textbox {
+    border: 2px inset maroon;
+}
+.button {
+    background-color: maroon;
+    color: white;
+}
