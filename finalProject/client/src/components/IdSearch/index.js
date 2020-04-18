@@ -1,4 +1,5 @@
 import React from 'react';
+import RecentSearches from '../RecentSearches';
 
 class NameSearch extends React.Component {
 
@@ -6,6 +7,11 @@ class NameSearch extends React.Component {
         super(props);
 
         this.readId = this.readId.bind(this);
+        this.recentSearch = this.recentSearch.bind(this);
+
+        this.state = {
+            searches: []
+        }
     }
 
     readId(event) {
@@ -21,8 +27,25 @@ class NameSearch extends React.Component {
             if(processed.error) {
                 reporting.innerHTML = processed.error;
             } else {
-                console.log(processed);
-                //reporting.innerHTML = processed.name;
+                console.log(processed + " in readId");
+                this.state.searches.push(processed);
+                reporting.innerHTML = "";
+                this.props.setResults(processed);
+            }
+        })
+    }
+
+    recentSearch(search) {
+        fetch("http://localhost:80/id/" + search.id).then((res) => {
+            return res.json();
+        }).then((processed) => {
+            let reporting = document.querySelector("#reportingArea");
+
+            if(processed.error) {
+                reporting.innerHTML = processed.error;
+            } else {
+                console.log(processed + " in recentSearch");
+                reporting.innerHTML = "";
                 this.props.setResults(processed);
             }
         })
@@ -36,6 +59,7 @@ class NameSearch extends React.Component {
                     <input id="id" type="text"/>
                     <button>Search</button>
                 </form>
+                <RecentSearches searches={this.state.searches} recentSearch={this.recentSearch}/>
             </div>
         )
     }

@@ -1,9 +1,6 @@
 import React from 'react';
 
 class Result extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return(
@@ -13,7 +10,7 @@ class Result extends React.Component {
                     <tbody>
                         <tr>
                             <td className="cell-icon">
-                                <img src={this.props.icon}/>
+                                <img src={this.props.icon} alt={this.props.name + " icon"}/>
                             </td>
                             <td className="cell-ID">
                                 <p>#{this.props.id}</p>
