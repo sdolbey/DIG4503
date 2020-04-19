@@ -4,9 +4,16 @@ class Result extends React.Component {
 
     render() {
         return(
-            <div>
-                <table>
-                    <thead></thead>
+            <div className="results">
+                <table className="u-full-width">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Types</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
                             <td className="cell-icon">
@@ -22,7 +29,7 @@ class Result extends React.Component {
                             {
                                 this.props.types.map((type, index) => {
                                     return(
-                                        <p key={index} className="type">
+                                        <p key={index} className={type + " type-icon"}>
                                             {type}
                                         </p>
                                     )

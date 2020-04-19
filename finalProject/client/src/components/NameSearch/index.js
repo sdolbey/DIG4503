@@ -43,7 +43,7 @@ class NameSearch extends React.Component {
     }
 
     recentSearch(search) {
-        fetch("http://localhost:80/id/" + search.name).then((res) => {
+        fetch("http://localhost:80/name/" + search.name).then((res) => {
             return res.json();
         }).then((processed) => {
             let reporting = document.querySelector("#reportingArea");
@@ -61,7 +61,7 @@ class NameSearch extends React.Component {
     render() {
         return(
             <div className="one-half column">
-                <h2>Search by Name</h2>
+                <p className="sectionTitle">By name</p>
                 <form onSubmit={this.readName}>
                     <input id="name" type="text"/>
                     <button>Search</button>

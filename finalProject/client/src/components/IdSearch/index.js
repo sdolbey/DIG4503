@@ -54,7 +54,7 @@ class NameSearch extends React.Component {
     render() {
         return(
             <div className="one-half column">
-                <h2>Search by ID</h2>
+                <p className="sectionTitle">By National Pokédex number</p>
                 <form onSubmit={this.readId}>
                     <input id="id" type="text"/>
                     <button>Search</button>

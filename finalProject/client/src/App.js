@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import NameSearch from './components/NameSearch';
 import IdSearch from './components/IdSearch';
 import Result from './components/Result';
@@ -28,11 +27,21 @@ class App extends React.Component {
     return (
       <div className="container">
         <div className="row">
+          <div className="u-full-width title">
+            <h1>Pokémon!</h1>
+          </div>
+        </div>
+        <hr/>
+        <div className="row">
+          <h2>Search</h2>
+        </div>
+        <div className="row">
           <IdSearch setResults={this.setResults} />
           <NameSearch setResults={this.setResults} />
         </div>
+        <hr/>
         <div className="row">
-          <h2>Reporting</h2>
+          <h2>Result</h2>
           <div id="reportingArea"></div>
           <Result 
             icon={icon}

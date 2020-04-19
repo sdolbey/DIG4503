@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&family=Roboto+Mono&display=swap');
+body {
+    background-color: #326CB5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 1em auto;
+    background-color: #fff;
+    border: 20px double #FFCB05;
+    padding: 1em;
+    -webkit-box-shadow: 0px 13px 32px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 32px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 32px -10px rgba(0,0,0,0.75);
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+}
+
+.title {
+
+}
+
+h2 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+hr {
+    border-color: #326CB5;
+    border-width: 2px;
+}
+
+.recentsTable {
+    max-height: 10em;
+    overflow: auto;
+}
+
+.recentsTable tr:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.sectionTitle {
+    font-weight: bold;
+}
+
+.results tbody tr {
+    height: 4em;
+}
+.results td {
+    vertical-align: middle;
+    padding: 0 15px;
+}
+td p {
+    margin: auto;
+    display: inline-block;
+}
+td img {
+    margin: auto;
+    display: inline-block;
+}
+.type-icon {
+    display: inline-block;
+    width: 66px;
+    margin-right: 4px;
+    background: #dbdbdb;
+    border: 1px solid #a3a3a3;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: normal;
+    line-height: 2.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial,sans-serif;
+}
+.Normal {
+    background-color: #aa9;
+}
+
+.Fire {
+    background-color: #f42
+}
+
+.Water {
+    background-color: #39f
+}
+
+.Electric {
+    background-color: #fc3
+}
+
+.Grass {
+    background-color: #7c5
+}
+
+.Ice {
+    background-color: #6cf
+}
+
+.Fighting {
+    background-color: #b54
+}
+
+.Poison {
+    background-color: #a59
+}
+
+.Ground {
+    background-color: #db5
+}
+
+.Flying {
+    background-color: #89f
+}
+
+.Psychic {
+    background-color: #f59
+}
+
+.Bug {
+    background-color: #ab2
+}
+
+.Rock {
+    background-color: #ba6
+}
+
+.Ghost {
+    background-color: #66b
+}
+
+.Dragon {
+    background-color: #76e
+}
+
+.Dark {
+    background-color: #754
+}
+
+.Steel {
+    background-color: #aab
+}
+
+.Fairy {
+    background-color: #e9e
+}
