@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NameSearch extends React.Component {
+class IdSearch extends React.Component {
     readId(event) {
         event.preventDefault();
 
@@ -27,9 +27,10 @@ class NameSearch extends React.Component {
                     <input id="id" type="text"/>
                     <button>Search</button>
                 </form>
+                
             </div>
         )
     }
 }
 
-export default NameSearch;
+export default IdSearch;
